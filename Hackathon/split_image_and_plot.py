@@ -3,10 +3,10 @@ plt.imshow(graphene_h[0])
 
 
 def split_to_patches(array, split_h, split_v):
-    h_split = np.hsplit(array, split_h)
+    v_split = np.vsplit(array, split_v)
     values = []
-    for x in h_split:
-        for y in np.vsplit(x, split_v):
+    for x in v_split:
+        for y in np.hsplit(x, split_h):
             values.append(y)
 
     return values
